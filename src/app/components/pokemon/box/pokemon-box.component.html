@@ -1,0 +1,11 @@
+<div class="pokemon-box">
+	<div class="pokemon-box-thumbnail clearfix">
+		<ng-template [ngIf]="id">
+			<a [routerLink]="['detail', id]">
+				<img src="{{sprite_uri + id + '.png'}}">
+			</a>
+		</ng-template>
+	</div>
+
+	<h2 class="pokemon-box-name">{{name}}</h2>
+</div>

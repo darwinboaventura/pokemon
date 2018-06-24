@@ -1,0 +1,25 @@
+.main-header {
+	width: 100%;
+	padding: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #ef5350;
+
+	h1 {
+		line-height: 1em;
+
+		a {
+			font-size: 20px;
+			font-weight: 600;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: -2px;
+			display: block;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}

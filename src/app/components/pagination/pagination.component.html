@@ -1,0 +1,11 @@
+<div class="btn-group" role="group">
+	<button type="button" class="btn btn-secondary" *ngIf="prev" (click)="handleFixedButtons('prev')">Anterior</button>
+
+	<ng-template [ngIf]="pages">
+		<ng-template ngFor let-page [ngForOf]="pages">
+			<button type="button" class="btn btn-secondary" [ngClass]="{'active': activePage === page}" (click)="changePage(page)">{{page}}</button>
+		</ng-template>
+	</ng-template>
+
+	<button type="button" class="btn btn-secondary" *ngIf="next" (click)="handleFixedButtons('next')">Próximo</button>
+</div>

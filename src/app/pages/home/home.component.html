@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="page-home">
+		<div class="row" *ngIf="pokemons">
+			<div class="col-sm-3" *ngFor="let pokemon of pokemons">
+				<app-pokemon-box [id]="pokemon.id" [name]="pokemon.name"></app-pokemon-box>
+			</div>
+		</div>
+
+		<div class="row" *ngIf="meta.total">
+			<div class="col-sm-12 text-center">
+				<app-pagination [total]="meta.total" [prev]="meta.uri.prev" [next]="meta.uri.next" limit="20" (pageChanged)="handlePagination($event)"></app-pagination>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,3 +1,4 @@
+import { errorHandler } from '@utils/error-handler';
 import { LoaderService} from '@services/loader/loader.service';
 import { PokemonService } from '@services/pokemon/pokemon.service';
 import { MessageService } from 'primeng/components/common/messageservice';
@@ -44,17 +45,7 @@ export class HomeComponent implements OnInit {
             }
 
             this.loader.hide();
-        }, (err: any) => {
-            console.log('ERROR:', err);
-
-            this.message.add({
-                severity: 'info',
-                summary: 'Ops...',
-                detail: err && err.message ? err.message : 'Não foi possível completar sua solicitação, tente novamente.'
-            });
-
-            this.loader.hide();
-        });
+        }, errorHandler.call(this));
     }
 
     handlePagination(offset) {

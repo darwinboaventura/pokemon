@@ -21,7 +21,8 @@
 			"@components/*": ["app/components/*"],
 			"@pages/*": ["app/pages/*"],
 			"@router/*": ["app/router/*"],
-			"@services/*": ["app/services/*"]
+			"@services/*": ["app/services/*"],
+			"@utils/*": ["app/utils/*"]
 		}
 	}
 }

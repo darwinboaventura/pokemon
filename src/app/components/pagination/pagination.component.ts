@@ -52,25 +52,7 @@ export class PaginationComponent implements OnInit {
         const pages = [];
 
         if (pagesQuantity) {
-            let start: any = 1;
-
-            if (this.activePage === this.pages[0]  && this.pages[0] > 0) {
-                start = this.activePage - 9;
-            }
-
-            if (this.activePage === this.pages[9]) {
-                start = this.activePage + 1;
-            }
-
-            if (start < 1) {
-                start = 1;
-            }
-
-            if (start > this.pages[this.pages.length]) {
-                start = this.pages[this.pages.length];
-            }
-
-            for (let i = start; i <= pagesQuantity && pages.length < 10; i++) {
+            for (let i = 1; i <= pagesQuantity && pages.length < 10; i++) {
                 pages.push(i);
             }
 
